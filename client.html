@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script>
+			function sendPostRequest()
+			{
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("POST","/api/links",true);
+				var url = document.getElementById('myUrl').value;
+				var params = 'url=' + url;
+				xmlhttp.send(params);
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input id='myUrl' size='60' placeholder='Please enter url including http or https prefix'></input>
+		</br>
+		<button type='button' onclick='sendPostRequest()'>send post</button>
+	</body>
+</html>
